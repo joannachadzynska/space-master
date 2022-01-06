@@ -23,6 +23,10 @@
       "dom"
     ],
     "paths": {
+      "shared-lib": [
+        "dist/shared-lib/shared-lib",
+        "dist/shared-lib"
+      ],
       "space-api/*": ["./projects/space-api/*"]
     }
   },
