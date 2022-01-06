@@ -1,5 +1,5 @@
-import { Equipment } from './equipments';
 import { LabDetails } from './lab-details';
+import { Equipment } from './equipments';
 
 export interface Lab {
   id: number;

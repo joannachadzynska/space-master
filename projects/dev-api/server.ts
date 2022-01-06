@@ -13,12 +13,12 @@ const server = create();
 const middlewares = defaults();
 
 // middlewares
-server.use(rewriter({ '/api/*': '/$1' }));
+server.use(rewriter({'/api/*': '/$1'}));
 server.use(middlewares);
 server.use(bodyParser);
 
 // connect db and custom routes
-routes.forEach(({ path, method, handler }) => server[method](path, handler));
+routes.forEach(({path, method, handler}) => server[method](path, handler));
 server.use(router(db));
 
 // run server

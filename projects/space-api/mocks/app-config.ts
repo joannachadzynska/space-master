@@ -6,6 +6,6 @@ export const mockedAppConfig: AppConfig = {
     start: true,
     launches: true,
     labs: true,
-    martianCalendar: true,
-  },
+    martianCalendar: true
+  }
 };

@@ -5,13 +5,10 @@ import { API_URL } from '../../tokens';
 import { Moon } from '../../types';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class MoonsService {
-  constructor(
-    private http: HttpClient,
-    @Inject(API_URL) private apiUrl: string
-  ) {}
+  constructor(private http: HttpClient, @Inject(API_URL) private apiUrl: string) {}
 
   getMoons(): Observable<Moon[]> {
     return this.http.get<Moon[]>(`${this.apiUrl}/moons`);
