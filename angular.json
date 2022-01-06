@@ -8,14 +8,6 @@
     "projects": {
         "space-app": {
             "projectType": "application",
-            "schematics": {
-                "@schematics/angular:component": {
-                    "style": "scss"
-                },
-                "@schematics/angular:application": {
-                    "strict": true
-                }
-            },
             "root": "projects/space-app",
             "sourceRoot": "projects/space-app/src",
             "prefix": "app",
@@ -103,12 +95,21 @@
                             "projects/space-app/src/favicon.ico",
                             "projects/space-app/src/assets"
                         ],
+                        "stylePreprocessorOptions": {
+                            "includePaths": ["projects/shared-styles"]
+                        },
                         "styles": ["projects/space-app/src/styles.scss"],
                         "scripts": []
                     }
                 }
             }
         }
+
     },
-    "defaultProject": "space-app"
+    "defaultProject": "space-app",
+    "schematics": {
+        "@schematics/angular:component": {
+            "style": "scss"
+        }
+    }
 }
