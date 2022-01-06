@@ -1,21 +1,23 @@
 .form-field {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .form-field.inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 .form-field.inline:not(:last-of-type) {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .form-field label {
-  display: block;
+    display: block;
 }
 
-input, select, textarea {
-  &.ng-invalid {
-    border: 2px solid red;
-  }
+input,
+select,
+textarea {
+    &.ng-invalid {
+        border: 2px solid red;
+    }
 }
