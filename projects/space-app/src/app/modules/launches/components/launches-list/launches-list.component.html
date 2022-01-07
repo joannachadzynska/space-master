@@ -1,3 +1,5 @@
+<!-- <cdk-virtual-scroll-viewport itemSize="168" class="launches-viewport"></cdk-virtual-scroll-viewport> -->
+
 <table>
   <thead>
     <tr>
@@ -12,6 +14,9 @@
     </tr>
   </thead>
   <tbody *ngFor="let launch of launches" appLaunchesListItem [launch]="launch">
-    <app-launch-details [details]="launch.details" (detailsUpdate)="updateDetails(launch, $event)"></app-launch-details>
+    <app-launch-details
+      [details]="launch.details"
+      (detailsUpdate)="updateDetails(launch, $event)"
+    ></app-launch-details>
   </tbody>
 </table>

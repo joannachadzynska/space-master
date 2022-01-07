@@ -1,20 +1,25 @@
 import { Component } from '@angular/core';
-import { LaunchesService } from 'space-api/services';
 import { LaunchDetailsUpdate } from 'space-api/types';
+import { LaunchesQueryParams } from './../../../../../../../space-api/types/launches-query-params';
+import { LaunchesStateService } from './../launches-state.service';
 
 @Component({
   selector: 'app-launches',
   templateUrl: './launches.component.html',
   styleUrls: ['./launches.component.scss'],
+  providers: [LaunchesStateService],
 })
 export class LaunchesComponent {
-  launches = this.launchesService.getLaunches();
+  launches = this.launchesState.launches;
+  queryParams = this.launchesState.queryParams;
 
-  constructor(private launchesService: LaunchesService) {}
+  constructor(private launchesState: LaunchesStateService) {}
 
   updateLaunchDetails(detailsUpdate: LaunchDetailsUpdate): void {
-    this.launchesService.updateDetails(detailsUpdate).subscribe(() => {
-      this.launches = this.launchesService.getLaunches();
-    });
+    this.launchesState.updateLaunchDetails(detailsUpdate);
+  }
+
+  searchLaunches(params: LaunchesQueryParams) {
+    this.launchesState.searchLaunches(params);
   }
 }
