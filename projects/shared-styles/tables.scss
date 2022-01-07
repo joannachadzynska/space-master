@@ -6,7 +6,7 @@ table {
 
 th {
   text-align: left;
-  background-color: lightgray;
+  background-color: darkgray;
   line-height: 2;
 }
 
@@ -15,13 +15,22 @@ tbody a {
 }
 
 tbody tr:last-of-type td {
-  padding-bottom: 20px;
+  padding-block: 1rem;
+  padding-left: 1rem;
 }
 
 tbody tr:first-of-type td {
-  padding-top: 20px;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
-tbody  tr:last-child {
+tbody tr:last-child {
   border-bottom: 2px solid darkgray;
+}
+
+tbody:nth-child(even) {
+  background: lightgray;
+}
+tbody:nth-child(odd) {
+  background: #fff;
 }
