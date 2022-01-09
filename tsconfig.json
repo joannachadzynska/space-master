@@ -27,7 +27,13 @@
         "dist/shared-lib/shared-lib",
         "dist/shared-lib"
       ],
-      "space-api/*": ["./projects/space-api/*"]
+      "space-api/*": [
+        "./projects/space-api/*"
+      ],
+      "ui-lib": [
+        "dist/ui-lib/ui-lib",
+        "dist/ui-lib"
+      ]
     }
   },
   "angularCompilerOptions": {
